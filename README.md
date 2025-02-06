@@ -1,4 +1,4 @@
-# Aerial-IRS-Communications
+# UAV-IRS-Communications
 
 ## References
 
