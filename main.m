@@ -1,11 +1,9 @@
-%% Simulation parameters
 clear;
 close all
 
 sim_times = 1e5; % number of simulation trials
 
 N = 5; % number of reflecting elements
-% Note: bigger N, longer running time
 
 snr_dB = 0:2:20; % average transmit SNR in dB
 R_th = 1; % SE threshold b/s/Hz
@@ -15,13 +13,11 @@ d_Sr = 1+rand; % random distance S->RIS
 d_rD = 1+rand; % random distance RIS->D
 PLE = 2.7; % path-loss exponent
 
-% Nakagami-m parameters
 m_Sr = 2.5 + rand; % random shape, S->RIS
 m_rD = 2.5 + rand; % random shape, RIS->D
 Omega_Sr = d_Sr^(-PLE); % random spread, S->RIS
 Omega_rD = d_rD^(-PLE); % random spread, RIS->D
 
-% Inverse Gammar (IG)'s parameters
 alpha_Sr = 3.0+rand; % random shape, S->RIS
 alpha_rD = 3.0+rand; % random shape, RIS->D
 beta_Sr = 1; % random spread, S->RIS
@@ -173,7 +169,6 @@ for ii = 1:length(snr_dB)
     OP_ana(ii) = F_Z2_fit( snr_th/snr );
 end
 
-%% Plotting results
 
 figure(2);
 semilogy(snr_dB, OP_sim, 'b+:'); hold on;
