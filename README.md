@@ -1,5 +1,53 @@
 # UAV-IRS-Communications
 
+## Overview
+This project consists of two MATLAB scripts that simulate and analyze RIS-aided wireless communication systems under Nakagami-m fading and Inverse Gamma shadowing. The simulations evaluate the impact of reflecting elements, phase shifts, and swarm-based modifications on system performance. The two key functionalities implemented in this project are:
+
+1. **Performance Comparison of RIS-Aided Systems** - Analyzes the spectral efficiency and outage probability for different system configurations.
+2. **Swarm-Based Modification** - Introduces a swarm-based approach where multiple UAV-mounted RIS elements are utilized to enhance signal reliability.
+
+## Functionalities
+### 1. Performance Comparison of RIS-Aided Systems
+This script simulates a standard RIS-aided communication system and evaluates:
+- End-to-end channel fading and shadowing models
+- Phase shift optimization for improved signal quality
+- Outage probability analysis under varying spectral efficiency thresholds
+- Analytical approximations of fading distributions
+
+#### Key Features:
+- Uses Nakagami-m fading and Inverse Gamma shadowing to model channel impairments.
+- Implements moment matching techniques to approximate the distribution of the received signal.
+- Evaluates the impact of different phase-shift configurations on outage probability.
+- Performs Laplace transform analysis for verifying analytical approximations.
+
+### 2. Swarm-Based Modification
+This script extends the original RIS model by incorporating a swarm-based approach where multiple UAV-mounted RIS elements work collaboratively to enhance transmission reliability.
+
+#### Key Features:
+- Introduces a swarm of UAVs, each carrying an IRS with a predefined number of reflecting elements.
+- Implements independent fading and shadowing models for each IRS within the swarm.
+- Simulates various transmit SNR scenarios to evaluate system performance.
+- Compares the swarm-based RIS system against the conventional single RIS setup.
+
+## Simulation Parameters
+- **Number of Simulation Trials**: `1e5`
+- **Number of Reflecting Elements (N)**: Configurable (`5` by default)
+- **Transmit SNR**: Varies from `0 dB` to `20 dB`
+- **Spectral Efficiency Threshold (R_th)**: Ranges from `1` to `4` b/s/Hz (comparison script) and fixed at `1` b/s/Hz (swarm script)
+- **Path-Loss Exponent (PLE)**: `2.7`
+
+## Key Equations and Techniques
+1. **Nakagami-m Fading**: Models small-scale fading in wireless channels using shape (`m`) and spread (`Ω`) parameters.
+2. **Inverse Gamma Shadowing**: Models large-scale fading effects using shape (`α`) and spread (`β`) parameters.
+3. **Moment Matching**: Used to approximate the statistical properties of the received signal.
+4. **Laplace Transform Analysis**: Validates the analytical approximation of the received signal distribution.
+5. **Optimal Phase-Shift Configuration**: Ensures constructive interference at the receiver.
+6. **Generalized Gaussian Quadrature**: Approximates the probability density function (PDF) of the aggregated received signal.
+
+## Dependencies
+- MATLAB (Tested on R2023a, but should be compatible with earlier versions)
+- MATLAB Statistics and Machine Learning Toolbox (for fitting distributions)
+
 ## References
 
 1. T. N. Do, G. Kaddoum, T. L. Nguyen, D. B. da Costa, and Z. J. Haas, **"Aerial Reconfigurable Intelligent Surface-Aided Wireless Communication Systems,"** *2021 IEEE 32nd Annual International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)*, Helsinki, Finland, 2021, pp. 525-530. [DOI: 10.1109/PIMRC50174.2021.9569450](https://doi.org/10.1109/PIMRC50174.2021.9569450)  
