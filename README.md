@@ -3,8 +3,8 @@
 ## Overview
 This project consists of two MATLAB scripts that simulate and analyze RIS-aided wireless communication systems under Nakagami-m fading and Inverse Gamma shadowing. The simulations evaluate the impact of reflecting elements, phase shifts, and swarm-based modifications on system performance. The two key functionalities implemented in this project are:
 
-1. **Performance comparison of RIS-aided systems** - Analyzes the spectral efficiency and outage probability for different system configurations.
-2. **Swarm-based modification** - Introduces a swarm-based approach where multiple UAV-mounted RIS elements are utilized to enhance signal reliability.
+1. **Performance comparison of RIS-aided systems**: Analyzes the spectral efficiency and outage probability for different system configurations.
+2. **Swarm-based modification**: Introduces a swarm-based approach where multiple UAV-mounted RIS elements are utilized to enhance signal reliability.
 
 ## Functionalities
 ### 1. Performance comparison of RIS-aided Systems
